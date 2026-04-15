@@ -4,7 +4,7 @@ from typing import Any, Dict, List, Optional
 
 import boto3
 
-DEFAULT_ENDPOINT_NAME = "jumpstart-dft-llama-3-1-8b-instruct-20260407-020737"
+DEFAULT_ENDPOINT_NAME = "jumpstart-dft-llama-3-1-8b-instruct-20260415-044330"
 
 
 class CrawlPreprocessor:

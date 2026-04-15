@@ -139,12 +139,7 @@ def detect_tech_hints(html: str, script_srcs: List[str]) -> List[str]:
 
 # ── Crawlee Implementation ────────────────────────────────────────────────────
 
-async def main():
-    if len(sys.argv) < 2:
-        print("Usage: python crawlee_parser.py <url>")
-        sys.exit(1)
-
-    url = sys.argv[1]
+async def run_parser(url: str, output_filename: str = "crawlee_result.json"):
     results = []
 
     crawler = PlaywrightCrawler(
@@ -205,15 +200,21 @@ async def main():
     await crawler.run([url])
     
     if results:
-        # Save to a specific file in the current directory
-        output_filename = "crawlee_result.json"
         with open(output_filename, "w", encoding="utf-8") as f:
             json.dump(results[0], f, indent=2, ensure_ascii=False)
         
         print(f"\n--- EXTRACTION COMPLETE ---")
         print(f"Results saved to: {output_filename}")
-        print("\n--- FINAL EXTRACTION RESULT (PREVIEW) ---")
-        print(json.dumps(results[0], indent=2, ensure_ascii=False)[:1000] + "...")
+        return results[0]
+    return None
+
+async def main():
+    if len(sys.argv) < 2:
+        print("Usage: python crawlee_parser.py <url>")
+        sys.exit(1)
+
+    url = sys.argv[1]
+    await run_parser(url)
 
 if __name__ == "__main__":
     asyncio.run(main())
