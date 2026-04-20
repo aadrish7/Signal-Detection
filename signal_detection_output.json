@@ -1,29 +1,29 @@
 {
-  "url": "https://www.asos.com/de/",
+  "url": "https://mystiquejewelers.com",
   "signals": {
     "revenue_brand_signal": {
-      "detected": "false",
-      "evidence": "The website appears to be a general fashion retailer, but there is no clear indication of luxury or high-end branding."
+      "detected": false,
+      "evidence": "No strong evidence of luxury or high-end brand cues"
     },
     "engagement_ring_focus": {
-      "detected": "false",
-      "evidence": "There is no clear emphasis on engagement rings, bridal, or wedding bands on the website."
+      "detected": true,
+      "evidence": "Multiple engagement ring collections and settings"
     },
     "ecommerce_maturity": {
-      "detected": "true",
-      "evidence": "The website has a mature ecommerce structure, with products, collections, and a clear shopping experience."
+      "detected": false,
+      "evidence": "No clear evidence of add-to-cart, checkout, or buy now functionality"
     },
     "ads_running": {
-      "detected": "true",
-      "evidence": "There are Google Ads scripts present on the website, indicating that ads are running."
+      "detected": true,
+      "evidence": "Google Analytics script and other tracking scripts present"
     },
     "multi_location_scale": {
-      "detected": "false",
-      "evidence": "There is no clear indication of multiple store locations or cities/stores listed on the website."
+      "detected": false,
+      "evidence": "No clear evidence of multiple store locations"
     },
     "custom_ring_offering": {
-      "detected": "false",
-      "evidence": "There is no clear evidence of custom ring design, ring builder, or bespoke/custom ring offering on the website."
+      "detected": false,
+      "evidence": "No clear evidence of custom ring design or ring builder"
     }
   }
 }
